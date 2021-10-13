@@ -4,11 +4,18 @@ setTimeout( function() {
 }, 4000);
 
 //Parallax text
-let text = document.getElementById("title");
+let text = document.getElementById('title');
 
-window.addEventListener("scroll", function() {
+window.addEventListener('scroll', function() {
     let value = window.scrollY;
     text.style.paddingTop = value * 0.5 + 'px';
+});
+
+//Nav background
+window.addEventListener('scroll', function () {
+    let header = document.querySelector('header');
+    let windowPosition = window.scrollY > 0;
+    header.classList.toggle('scrolling-active', windowPosition);
 });
 
 
