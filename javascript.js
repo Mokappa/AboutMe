@@ -5,7 +5,7 @@ setTimeout( function() {
 
 
 
-//Parallax text
+//Parallax Text
 let text = document.getElementById('title');
 
 window.addEventListener('scroll', function() {
@@ -15,7 +15,7 @@ window.addEventListener('scroll', function() {
 
 
 
-//Nav background
+//Nav Background
 let header = document.querySelector('header');
 
 window.addEventListener('scroll', function() {
@@ -25,24 +25,10 @@ window.addEventListener('scroll', function() {
 
 
 
-/*GET LENGTH OF PATHS
+/*Get length of paths
 const logo = document.querySelectorAll("#logo path");
 
 for( let i = 0; i < logo.length; ++ i )
 {
     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }*/
-
-
-
-/*NAV COLOR AFTER SCROLLING
-var nav = document.querySelector("nav");
-
-window.addEventListener("scroll", function() {
-    if( window.pageYOffset > 100 ) {
-        nav.classList.add('bg-dark', 'shadow');
-    } else {
-        nav.classList.remove('bg-dark', 'shadow');
-    }
-});
-*/
