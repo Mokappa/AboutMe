@@ -126,7 +126,7 @@ header {
 
 .burger div {
     width: 22px;
-    height: 1px;
+    height: 2px;
     background-color: white;
     margin: 5px;
     transition: transform 0.3s ease;
@@ -704,6 +704,21 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    #title {
+        font-size: 75px;
+    }
+
+    #logo {
+        width: 50%;
+    }
+    
+    .nav {
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        margin: 0 50px;
+    }
+    
     .nav-list {
         display: none;
     }
@@ -741,9 +756,11 @@ header {
     
     .incercare a {
         text-decoration: none;
+        font-weight: bold;
         color: #fff;
         font-size: 2rem;
         font-family: 'Poppins';
+        letter-spacing: 2px;
     }
     
     .incercare-activ {
@@ -756,11 +773,11 @@ header {
 
 
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-2.5px, 5px);
+    transform: rotate(-45deg) translate(-3.5px, 5px);
 }
 
 .toggle .line2 {
-    transform: rotate(45deg) translate(-2.5px, -5px);
+    transform: rotate(45deg) translate(-3.5px, -5px);
 }
 
 
