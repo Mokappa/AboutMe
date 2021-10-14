@@ -3,6 +3,8 @@ setTimeout( function() {
     $('.preloader').fadeToggle();
 }, 4000);
 
+
+
 //Parallax text
 let text = document.getElementById('title');
 
@@ -11,12 +13,16 @@ window.addEventListener('scroll', function() {
     text.style.paddingTop = value * 0.5 + 'px';
 });
 
+
+
 //Nav background
-window.addEventListener('scroll', function () {
-    let header = document.querySelector('header');
+let header = document.querySelector('header');
+
+window.addEventListener('scroll', function() {
     let windowPosition = window.scrollY > 0;
     header.classList.toggle('scrolling-active', windowPosition);
 });
+
 
 
 /*GET LENGTH OF PATHS
@@ -26,6 +32,7 @@ for( let i = 0; i < logo.length; ++ i )
 {
     console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }*/
+
 
 
 /*NAV COLOR AFTER SCROLLING
