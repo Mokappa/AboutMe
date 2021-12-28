@@ -1,82 +1,82 @@
 <!DOCTYPE html>
 
 <html>
-
 <head lang='en'>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="icon" type="image/png" href="ficon.png">
 	<title>Homepage</title>
-    <!--Font-->
+    
+    <!-- Fav Icon -->
+	<link rel="icon" type="image/png" href="ficon.png">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    <!--CSS-->
+    
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-    <section>
-        <div class="preloader">
-            <svg id="logo" width="307" height="110" viewBox="0 0 307 110" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.71875 107V2.26367H10.4092L57.6504 97.9912L101.962 2.26367H108.92V107H101.962V16.3994L60.3604 107H54.0615L9.67676 15.667V107H2.71875Z" stroke="white" stroke-width="3"/>
-                <path d="M136.386 68.2549C136.386 90.1787 145.785 101.141 164.584 101.141C183.383 101.141 192.782 90.1787 192.782 68.2549C192.782 46.7217 183.383 35.9551 164.584 35.9551C145.785 35.9551 136.386 46.7217 136.386 68.2549ZM128.695 68.5479C128.695 42.4248 140.658 29.3633 164.584 29.3633C188.51 29.3633 200.473 42.4248 200.473 68.5479C200.473 94.6221 188.51 107.659 164.584 107.659C140.756 107.659 128.793 94.6221 128.695 68.5479Z" stroke="white" stroke-width="3"/>
-                <path d="M227.938 2.26367V107H220.248V2.26367H227.938ZM299.789 2.26367L249.911 51.8486L301.547 107H290.048L242.221 54.4121V49.8711L289.242 2.26367H299.789Z" stroke="white" stroke-width="3"/>
-            </svg>
-        </div>
-    </section>
+    <!-- <div class="preloader">
+        <svg id="logo" width="307" height="110" viewBox="0 0 307 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.71875 107V2.26367H10.4092L57.6504 97.9912L101.962 2.26367H108.92V107H101.962V16.3994L60.3604 107H54.0615L9.67676 15.667V107H2.71875Z" stroke="white" stroke-width="3"/>
+            <path d="M136.386 68.2549C136.386 90.1787 145.785 101.141 164.584 101.141C183.383 101.141 192.782 90.1787 192.782 68.2549C192.782 46.7217 183.383 35.9551 164.584 35.9551C145.785 35.9551 136.386 46.7217 136.386 68.2549ZM128.695 68.5479C128.695 42.4248 140.658 29.3633 164.584 29.3633C188.51 29.3633 200.473 42.4248 200.473 68.5479C200.473 94.6221 188.51 107.659 164.584 107.659C140.756 107.659 128.793 94.6221 128.695 68.5479Z" stroke="white" stroke-width="3"/>
+            <path d="M227.938 2.26367V107H220.248V2.26367H227.938ZM299.789 2.26367L249.911 51.8486L301.547 107H290.048L242.221 54.4121V49.8711L289.242 2.26367H299.789Z" stroke="white" stroke-width="3"/>
+        </svg>
+    </div> -->
 
 
+    <!-- Navbar -->
+    <header data-close="noClose">
+        <nav class="nav" data-close="noClose">
+            <p class="navLogo" data-close="noClose">Mok</p>
 
-    <header>
-        <nav class="nav">
-            <h4 class="logo">Mok</h4>
-
-            <ul class="nav-list">
+            <ul class="navList">
                 <li>
-                    <a href="#" class="nav-link nav-link-About">About</a>
+                    <a href="#" class="navLink" id="navLinkAbout">About</a>
                 </li>
                 <li>
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#" class="navLink">Contact</a>
                 </li>
             </ul>
 
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
+            <div class="burgerMenu" data-close="noClose">
+                <div class="line1" data-close="noClose"></div>
+                <div class="line2" data-close="noClose"></div>
             </div>
         </nav>
     </header>
 
 
-
-    <div class="incercare">
-        <ul class="navincercare">
-            <li>
-                <a href="#" class="navlinkincercare nav-About">About</a>
+    <!-- Navbar appearing from Bottom on Phone -->
+    <div class="navPhone" data-close="noClose">
+        <ul>
+            <li data-close="noClose">
+                <a href="#" class="navlinkincercare" data-close="noClose">About</a>
             </li>
-            <li>
-                <a href="#" class="navlinkincercare">Contact</a>
+            <li data-close="noClose">
+                <a href="#" class="navlinkincercare" data-close="noClose">Contact</a>
             </li>
         </ul>
     </div>
 
 
 
-    <section class="heroStars">
+    <div class="heroStars">
         <div id="stars"></div>
         <div id="stars2"></div>
-        <div id="stars3"></div>
 
         <div id="title">
-            <span>Hello.</span>
+            <p>Hello.</p>
         </div>
-    </section>
+    </div>
 
     
 
-    <section class="heroContent">
+    <div class="heroContent">
         <h1>About me</h1>
         <p>
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
@@ -88,7 +88,7 @@
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
             At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
         </p>
-    </section>
+    </div>
 
 
 
@@ -97,10 +97,9 @@
     </footer>
 
 
-
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="javascript.js"></script>
     <script type="text/javascript" src="javascript2.js"></script>
 </body>
-
 </html>

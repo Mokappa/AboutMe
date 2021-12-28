@@ -1,26 +1,33 @@
 //Nav Burger
+navSlide()
+
 function navSlide() {
-	const burger = document.querySelector('.burger');
-	const nav = document.querySelector('.incercare');
-	const navLinks = document.querySelectorAll('.nav-list li');
+	const burger = document.querySelector('.burgerMenu')
+	const navLinks = document.querySelectorAll('.navList li')
+	const nav = document.querySelector('.navPhone')
 
 	burger.addEventListener('click', function() {
 		//Toggle Nav
-		nav.classList.toggle('incercare-activ');
+		nav.classList.toggle('navPhoneActiv')
 
+		//Burger Animation
+		burger.classList.toggle('toggle')
+		
 		//Animate Links
 		navLinks.forEach( function(link, index) {
 			if(link.style.animation) {
-				link.style.animation = '';
+				link.style.animation = ''
 			}
 			else {
-				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+				link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`
 			}
-		});
-        
-        //Burger Animation
-		burger.classList.toggle('toggle'); 
-	});
+		})
+	})
+	
+	window.addEventListener('touchstart', function (e) {
+		if(e.target.getAttribute('data-close') !== 'noClose') {
+			burger.classList.remove('toggle')
+			nav.classList.remove('navPhoneActiv')
+		}
+	})
 }
-
-navSlide();

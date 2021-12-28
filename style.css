@@ -2,28 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-anchor: none;
+    font-family: 'Poppins';
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-html {
+body {
     height: 100%;
     background: black;
 }
 
-.incercare {
+.navPhone {
     display: none;
 }
-
 
 
 /*Loading Animation*/
 .preloader {
     position: fixed;
-    background-color: black;
     top: 0;
+    background-color: black;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
-    z-index: 99999;
+    z-index: 9999;
     pointer-events: none;
 }
 
@@ -38,21 +39,20 @@ html {
 #logo path:nth-child(1) {
     stroke-dasharray: 839.75px;
     stroke-dashoffset: 839.75px;
-    animation: line-animation 4s ease forwards;
+    animation: lineAnimation 4s ease forwards;
 }
 
 #logo path:nth-child(2) {
     stroke-dasharray: 441.2px;
     stroke-dashoffset: 441.2px;
-    animation: line-animation 4s ease forwards 0.3s;
+    animation: lineAnimation 4s ease forwards 0.3s;
 }
 
 #logo path:nth-child(3) {
     stroke-dasharray: 535.32px;
     stroke-dashoffset: 535.32px;
-    animation: line-animation 4s ease forwards 0.6s;
+    animation: lineAnimation 4s ease forwards 0.6s;
 }
-
 
 
 /*Nav Bar*/
@@ -62,69 +62,71 @@ header {
     top: 0;
     left: 0;
     transition: background-color .5s ease;
-    z-index: 1000;
+    z-index: 999;
     font-family: 'Poppins';
 }
 
 .nav {
-    height: 5rem;
+    height: 8vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 0 100px;
 }
 
-.nav .logo {
-    font-size: 2rem;
+.navLogo {
+    font-size: 35px;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
     cursor: default;
 }
 
-.nav-list {
+.navList {
     list-style: none;
     display: flex;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.nav-link {
+.navLink {
     position: relative;
 }
 
-.nav-link-About {
+#navLinkAbout {
     margin-right: 100px;
 }
 
 .nav a {
     text-decoration: none;
     color: #fff;
-    font-size: 1.5rem;
+    font-size: 25px;
 }
 
-.nav-link:after {
+.navLink:after {
     content: '';
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
     position: absolute;
     left: 0;
     bottom: -3px;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
     transform: scaleX(0);
     transform-origin: center;
     transition: transform .5s ease;
-    opacity: 0.5;
 }
 
-.nav-link:hover:after {
+.navLink:hover:after {
     transform: scaleX(1);
 }
 
-.burger {
+/* Nav for Phone */
+.burgerMenu {
     display: none;
     cursor: pointer;
 }
 
-.burger div {
+.burgerMenu div {
     width: 22px;
     height: 2px;
     background-color: white;
@@ -132,18 +134,25 @@ header {
     transition: transform 0.3s ease;
 }
 
-.burger .line1 {
+.burgerMenu .line1 {
     margin-bottom: 10px;
 }
 
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-3.5px, 5px);
+}
+
+.toggle .line2 {
+    transform: rotate(45deg) translate(-3.5px, -5px);
+}
+
+
 /*Apply styles after scroll*/
-.scrolling-active {
+.scrollingActive {
     background-color: rgba(48, 48, 48, 0.5);
     box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
 }
-
-
 
 
 /*Hero Title*/
@@ -153,37 +162,23 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
-    font-family: 'Poppins';
     font-size: 100px;
     font-weight: bold;
     cursor: default;
+    transition: padding 0.1s ease;
 }
 
-#title span {
+#title p {
     background: -webkit-linear-gradient(white, #38495a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 
-
-/*Hero Content*/
-.heroContent {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: black;
-    color: white;
-    text-align: center;
-}
-
-
-
 /*Stars Background*/
 .heroStars {
-    position: relative;
     z-index: -999;
-    display: block;
+    position: relative;
     width: 100%;
     height: 100vh;
     background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
@@ -196,8 +191,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url(waves.svg);
+    height: 100vh;
+    background-image: url('./waves.svg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -691,18 +686,18 @@ header {
 }
 
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1024px) {
-    
+/*Hero Content*/
+.heroContent {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
 }
 
+
+/*Responsive*/
 @media screen and (max-width: 768px) {
     #title {
         font-size: 75px;
@@ -719,19 +714,19 @@ header {
         margin: 0 50px;
     }
     
-    .nav-list {
+    .navList {
         display: none;
     }
 
-    .nav-link:after {
+    .navLink:after {
         display: none;
     }
     
-    .burger {
+    .burgerMenu {
         display: block;
     }
 
-    .incercare {
+    .navPhone {
         width: 100%;
         height: 50%;
         position: fixed;
@@ -748,13 +743,13 @@ header {
         backdrop-filter: blur(4px);
     }
     
-    .incercare li {
+    .navPhone li {
         opacity: 1;
         list-style: none;
         padding: 50px 0;
     }
     
-    .incercare a {
+    .navPhone a {
         text-decoration: none;
         font-weight: bold;
         color: #fff;
@@ -763,27 +758,14 @@ header {
         letter-spacing: 2px;
     }
     
-    .incercare-activ {
+    .navPhoneActiv {
         transform: translateY(0%);
     }
 }
 
 
-
-
-
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-3.5px, 5px);
-}
-
-.toggle .line2 {
-    transform: rotate(45deg) translate(-3.5px, -5px);
-}
-
-
-
 /*Animations*/
-@keyframes line-animation {
+@keyframes lineAnimation {
     to {
         stroke-dashoffset: 0;
     }
