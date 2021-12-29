@@ -7,6 +7,9 @@ function navSlide() {
 	const nav = document.querySelector('.navPhone')
 
 	burger.addEventListener('click', function() {
+		// 
+		window.addEventListener('touchmove', preventDefault, { passive: false })
+
 		//Toggle Nav
 		nav.classList.toggle('navPhoneActiv')
 
@@ -28,6 +31,13 @@ function navSlide() {
 		if(e.target.getAttribute('data-close') !== 'noClose') {
 			burger.classList.remove('toggle')
 			nav.classList.remove('navPhoneActiv')
+			window.removeEventListener('touchmove', preventDefault)
 		}
 	})
+}
+
+
+
+function preventDefault(e) {
+	e.preventDefault();
 }
